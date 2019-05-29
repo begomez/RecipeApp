@@ -14,22 +14,38 @@
  * limitations under the License.
  */
 
-package com.recipe_app.client;
+package com.recipe_app.client.ui.home;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-import com.recipe_app.R;
+import com.recipe_app.client.BaseActivity;
+import com.recipe_app.client.Navigator;
+import com.recipe_app.client.R;
 
 /**
  * This Activity class defines the home screen for the recipe app.
  */
-public class HomeActivity extends Activity {
+public class HomeScreen extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.layout = (R.layout.screen_home);
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+    }
+
+    @Override
+    protected void setListeners() {
+        super.setListeners();
+
+        ((Button) this.findViewById(R.id.btnAddIngredients)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigator.toIngredients(HomeScreen.this, new Bundle());
+            }
+        });
     }
 }
