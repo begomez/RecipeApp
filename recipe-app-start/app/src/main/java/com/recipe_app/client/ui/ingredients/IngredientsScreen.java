@@ -2,7 +2,6 @@ package com.recipe_app.client.ui.ingredients;
 
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-
 import com.recipe_app.client.BaseActivity;
 import com.recipe_app.client.R;
 

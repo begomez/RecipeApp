@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-
 import com.recipe_app.client.R;
 import com.recipe_app.client.data.model.Ingredient;
 import android.view.LayoutInflater;
@@ -38,7 +37,9 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
 
     public IngredientsAdapter.IngredientsViewHolder onCreateViewHolder(ViewGroup parent,
                                                                        int viewType) {
-        RelativeLayout rl = null;//(RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredients), parent, false);
+//        RelativeLayout rl = null;//(RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredients), parent, false);
+        RelativeLayout rl = null;
+        //LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredients);
         IngredientsViewHolder ivh = new IngredientsViewHolder(rl);
         return ivh;
     }
