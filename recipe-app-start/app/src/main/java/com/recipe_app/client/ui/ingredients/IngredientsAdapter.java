@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.recipe_app.client.R;
+import com.recipe_app.client.data.model.DummyData;
 import com.recipe_app.client.data.model.Ingredient;
 
 
@@ -33,26 +34,20 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
     }
 
     public IngredientsAdapter(){
-        this.data = IngredientsAdapter.generateDummyData(15);
+        this.data = DummyData.getListOfIngredients(15);
     }
 
     public IngredientsAdapter(Ingredient[] data){
         //this.data = data;                                         //TODO
-        this.data = IngredientsAdapter.generateDummyData(15);
+        this.data = DummyData.getListOfIngredients(15);
     }
 
-    private static Ingredient[] generateDummyData(int length) {
-            Ingredient[] ingList = new Ingredient[length];
-            for(int i = 0; i < length; i++) {
-                ingList[i] = new Ingredient("", "Ingredient " + i, "Veritas", "bla bla bla");
-            }
-        return ingList;
-    }
+
 
     public IngredientsAdapter.IngredientsViewHolder onCreateViewHolder(ViewGroup parent,
                                                                        int viewType) {
-        RelativeLayout rl = (RelativeLayout) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredients, parent, false);
-        IngredientsViewHolder ivh = new IngredientsViewHolder(rl);
+        ViewGroup vg = (ViewGroup) LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredients, parent, false);
+        IngredientsViewHolder ivh = new IngredientsViewHolder(vg);
         return ivh;
     }
 
