@@ -3,26 +3,36 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".client.ui.ingredients.IngredientsAdapter">
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
 
     <ImageView
         android:id="@+id/ingr_img"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:src="@drawable/ic_launcher"/>
 
     <TextView
         android:id="@+id/ingr_txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ingr_img"
+        android:paddingTop="16dp"
         android:lines="1"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/ingr_txt_whereToBuy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ingr_img"
+        android:layout_below="@id/ingr_txt_name"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
         android:lines="1"
-        android:maxLines="1"/>
+        android:maxLines="1"
+        android:textColor="@android:color/darker_gray"/>
 
 </RelativeLayout>

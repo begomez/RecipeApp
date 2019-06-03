@@ -34,13 +34,10 @@
 
     <Button
         android:id="@+id/btnAddIngredients"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-
         android:text="Add ingredients"
         />
 
