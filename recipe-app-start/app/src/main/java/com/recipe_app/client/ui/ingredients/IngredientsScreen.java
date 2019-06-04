@@ -20,20 +20,7 @@ public class IngredientsScreen extends BaseActivity {
 
         super.onCreate(savedInstanceState);
 
-        recyclerView = (RecyclerView) findViewById(R.id.list_ingredients);
-        //recyclerView.setHasFixedSize(true);
-
-        //use a linear layout manager
-        layoutManager = new LinearLayoutManager(this);
-
-        recyclerView.setLayoutManager(layoutManager);
-
-//        DividerItemDecoration mDividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
-//                                                                                    ((LinearLayoutManager) layoutManager).getOrientation());
-//        recyclerView.addItemDecoration(mDividerItemDecoration);
-
-        mAdapter = new IngredientsAdapter();            //TODO database
-        recyclerView.setAdapter(mAdapter);
+        this.launchMainFragment(R.id.screen_ingredients_frag_container, IngredientsMainFragment.getInstance(), false);
     }
 
 }
