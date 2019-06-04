@@ -17,4 +17,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+    <!-- INGREDIENTS -->
+    <string name="no_ingredients">No ingredients found</string>
+
 </resources>
