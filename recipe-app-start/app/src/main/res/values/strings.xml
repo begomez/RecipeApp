@@ -5,6 +5,7 @@
     <string name="title_activity_login_screen">Sign in</string>
     <string name="title_activity_home_screen">Home</string>
     <string name="title_activity_recipes_screen">Recipes</string>
+    <string name="title_activity_recipes_detail_screen">Recipe detail</string>
     <string name="title_activity_ingredients_screen">Ingredients</string>
 
     <!-- LOGIN -->

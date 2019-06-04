@@ -34,6 +34,10 @@
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.recipes.RecipesDetailScreen"
+            android:label="@string/title_activity_recipes_detail_screen"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />        <activity
             android:name=".ui.ingredients.IngredientsScreen"
             android:label="@string/title_activity_ingredients_screen"
             android:launchMode="singleInstance"

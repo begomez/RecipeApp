@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.recipe_app.client.BaseFragment;
+import com.recipe_app.client.Navigator;
 import com.recipe_app.client.R;
 import com.recipe_app.client.ui.ingredients.IngredientsAdapter;
 
@@ -60,8 +61,9 @@ public class RecipeMainFragment extends BaseFragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New Recipe!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Navigator.toRecipesDetail(RecipeMainFragment.this.getActivity(), new Bundle());
+                //Snackbar.make(view, "New Recipe!", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
             }
         });
 
