@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/item_ingr_card_view"
+    android:id="@+id/item_rec_card_view"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     card_view:cardBackgroundColor="@android:color/white"
@@ -20,35 +19,49 @@
         android:clipToPadding="false">
 
         <ImageView
-            android:id="@+id/ingr_img"
+            android:id="@+id/rec_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:src="@drawable/baseline_shopping_basket_black_48" />
+            android:src="@drawable/baseline_receipt_black_48" />
 
         <TextView
-            android:id="@+id/ingr_txt_name"
+            android:id="@+id/rec_txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/ingr_img"
+            android:layout_toRightOf="@id/rec_img"
             android:lines="1"
             android:maxLines="1"
             android:paddingTop="16dp"
             android:textColor="@android:color/black"
-            android:text="Ingredient Name"/>
+            android:text="Recipe Name"/>
 
         <TextView
-            android:id="@+id/ingr_txt_whereToBuy"
+            android:id="@+id/rec_txt_difficulty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ingr_txt_name"
-            android:layout_toRightOf="@id/ingr_img"
+            android:layout_below="@id/rec_txt_name"
+            android:layout_toRightOf="@id/rec_img"
             android:lines="1"
             android:maxLines="1"
             android:paddingTop="8dp"
             android:paddingBottom="16dp"
             android:textColor="@android:color/darker_gray"
-            android:text="Store where to buy it"/>
+            android:text="Difficulty"/>
+
+        <TextView
+            android:id="@+id/rec_txt_timeToPrep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rec_txt_name"
+            android:layout_toRightOf="@id/rec_txt_difficulty"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/darker_gray"
+            android:text="(Time to Prepare)"/>
 
     </RelativeLayout>
 

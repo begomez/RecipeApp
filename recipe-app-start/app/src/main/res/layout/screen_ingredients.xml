@@ -11,10 +11,8 @@
     <!-- FRAGMENT GOES INSIDE THIS ONE... -->
     <FrameLayout
         android:id="@+id/screen_ingredients_frag_container"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
     </FrameLayout>
 
 </RelativeLayout>

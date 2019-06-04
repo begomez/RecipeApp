@@ -20,4 +20,7 @@
     <!-- INGREDIENTS -->
     <string name="no_ingredients">No ingredients found</string>
 
+    <!-- RECIPES -->
+    <string name="no_recipes">No recipes found</string>
+
 </resources>

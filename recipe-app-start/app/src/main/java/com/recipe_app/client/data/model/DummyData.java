@@ -9,4 +9,13 @@ public class DummyData {
         }
         return ingList;
     }
+
+    public static Recipe[] getListOfRecipes(int length) {
+        Recipe[] recList = new Recipe[length];
+
+        for(int i = 0; i < length; i++) {
+            recList[i] = new Recipe("", "Recipe " + i, "", "", "15-20 min.", "Easy");
+        }
+        return recList;
+    }
 }

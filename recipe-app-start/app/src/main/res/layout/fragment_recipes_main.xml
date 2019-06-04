@@ -7,21 +7,21 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/list_ingredients"
+        android:id="@+id/list_recipes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
         />
 
     <TextView
-        android:id="@+id/list_ingredients_empty"
+        android:id="@+id/list_recipes_empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@string/no_ingredients"
+        android:src="@string/no_recipes"
         />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/ingr_btn_add"
+        android:id="@+id/rec_btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"

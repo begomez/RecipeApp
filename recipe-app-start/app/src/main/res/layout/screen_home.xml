@@ -29,7 +29,6 @@
             android:layout_alignParentBottom="false"
             android:layout_alignParentEnd="true"
             />
-
     </LinearLayout>
 
     <Button
@@ -39,6 +38,14 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="Add ingredients"
+        />
+
+    <Button
+        android:id="@+id/btnAddRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnAddIngredients"
+        android:text="Add recipes"
         />
 
 </RelativeLayout>

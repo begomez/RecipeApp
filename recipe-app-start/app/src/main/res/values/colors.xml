@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="headerColor">#518BA5</color>
+    <!--<color name="headerColor">#518BA5</color>-->
 
     <!--   color for the app bar and other primary UI elements -->
     <color name="colorPrimary">#c8e6c9</color>

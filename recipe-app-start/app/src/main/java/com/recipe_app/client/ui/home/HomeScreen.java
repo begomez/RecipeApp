@@ -47,5 +47,12 @@ public class HomeScreen extends BaseActivity {
                 Navigator.toIngredients(HomeScreen.this, new Bundle());
             }
         });
+
+        ((Button) this.findViewById(R.id.btnAddRecipes)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigator.toRecipes(HomeScreen.this, new Bundle());
+            }
+        });
     }
 }

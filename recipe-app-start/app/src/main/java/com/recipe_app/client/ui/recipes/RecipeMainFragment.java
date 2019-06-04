@@ -1,4 +1,4 @@
-package com.recipe_app.client.ui.ingredients;
+package com.recipe_app.client.ui.recipes;
 
 
 import android.os.Bundle;
@@ -11,23 +11,24 @@ import android.view.View;
 
 import com.recipe_app.client.BaseFragment;
 import com.recipe_app.client.R;
+import com.recipe_app.client.ui.ingredients.IngredientsAdapter;
 
 
-public class IngredientsMainFragment extends BaseFragment {
+public class RecipeMainFragment extends BaseFragment {
 
-    public static IngredientsMainFragment getInstance() {
+    public static RecipeMainFragment getInstance() {
         return getInstance(new Bundle());
     }
 
-    public static IngredientsMainFragment getInstance(Bundle b) {
-        IngredientsMainFragment frag = new IngredientsMainFragment();
+    public static RecipeMainFragment getInstance(Bundle b) {
+        RecipeMainFragment frag = new RecipeMainFragment();
         frag.setArguments(b);
         return frag;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        this.layout = R.layout.fragment_ingredients_main;
+        this.layout = R.layout.fragment_recipes_main;
         super.onCreate(savedInstanceState);
     }
 
@@ -39,7 +40,7 @@ public class IngredientsMainFragment extends BaseFragment {
     }
 
     protected void addAdapter() {
-        RecyclerView recyclerView = (RecyclerView) this.getView().findViewById(R.id.list_ingredients);
+        RecyclerView recyclerView = (RecyclerView) this.getView().findViewById(R.id.list_recipes);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
 
@@ -50,16 +51,16 @@ public class IngredientsMainFragment extends BaseFragment {
 //                                                                                    ((LinearLayoutManager) layoutManager).getOrientation());
 //        recyclerView.addItemDecoration(mDividerItemDecoration);
 
-        IngredientsAdapter mAdapter = new IngredientsAdapter();            //TODO database
+        RecipeAdapter mAdapter = new RecipeAdapter();            //TODO database
         recyclerView.setAdapter(mAdapter);
     }
 
     protected void addFloatingButton() {
-        FloatingActionButton fab = this.getView().findViewById(R.id.ingr_btn_add);
+        FloatingActionButton fab = this.getView().findViewById(R.id.rec_btn_add);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New Ingredient!", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "New Recipe!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

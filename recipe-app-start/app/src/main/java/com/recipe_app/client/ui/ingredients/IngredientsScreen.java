@@ -17,9 +17,7 @@ public class IngredientsScreen extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.layout = (R.layout.screen_ingredients);
-
         super.onCreate(savedInstanceState);
-
         this.launchMainFragment(R.id.screen_ingredients_frag_container, IngredientsMainFragment.getInstance(), false);
     }
 
