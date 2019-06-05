@@ -18,4 +18,14 @@ public class DummyData {
         }
         return recList;
     }
+
+    public static RecipeIngredient[] getListOfRecipeIngredients(int length) {
+        RecipeIngredient[] recIngList = new RecipeIngredient[length];
+
+        Ingredient[] ingList = getListOfIngredients(length);
+        for(int i = 0; i < length; i++) {
+            recIngList[i] = new RecipeIngredient(ingList[i], 1, "cs");
+        }
+        return recIngList;
+    }
 }

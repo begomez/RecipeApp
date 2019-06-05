@@ -1,13 +1,18 @@
 package com.recipe_app.client.ui.recipes;
 
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import com.recipe_app.client.R;
 
 
 public class RecipeFragmentAdapter extends FragmentPagerAdapter {
+
+    private Context context;
 
     interface Numbers {
         int FIRST = 0;
@@ -16,8 +21,9 @@ public class RecipeFragmentAdapter extends FragmentPagerAdapter {
         int NUM_FRAGMENTS = 3;
     }
 
-    public RecipeFragmentAdapter(FragmentManager fm) {
+    public RecipeFragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
+        this.context = context;
     }
 
     @Override
@@ -42,11 +48,11 @@ public class RecipeFragmentAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case Numbers.FIRST:
-                return "Ingr";
+                return context.getString(R.string.tab_ingredients);
             case Numbers.SECOND:
-                return "Prep";
+                return context.getString(R.string.tab_preparation);
             case Numbers.THIRD:
-                return "Notes";
+                return context.getString(R.string.tab_notes);
             default:
                 return "";
         }

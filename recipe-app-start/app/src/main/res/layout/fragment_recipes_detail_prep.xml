@@ -17,4 +17,18 @@
         android:text="2"
         />
 
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recipe_preparation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/list_recipe_preparation_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@string/no_ingredients_in_rec"
+        />-->
+
 </FrameLayout>

@@ -20,8 +20,12 @@
 
     <!-- INGREDIENTS -->
     <string name="no_ingredients">No ingredients found</string>
+    <string name="no_ingredients_in_rec">Wow! No ingredients...! What a tasteful recipe! :-) </string>
 
     <!-- RECIPES -->
     <string name="no_recipes">No recipes found</string>
+    <string name="tab_ingredients">Ingredients</string>
+    <string name="tab_preparation">Preparation</string>
+    <string name="tab_notes">Notes</string>
 
 </resources>
