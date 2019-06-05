@@ -28,4 +28,23 @@ public class DummyData {
         }
         return recIngList;
     }
+
+    public static RecipePreparation[] getListOfRecipePreparationSteps(int length) {
+        RecipePreparation[] recPrepList = new RecipePreparation[length];
+
+        for(int i = 0; i < length; i++) {
+            recPrepList[i] = new RecipePreparation(i, "Preparation Step " + i);
+        }
+        return recPrepList;
+    }
+
+
+    public static RecipeNote[] getListOfRecipeNotes(int length) {
+        RecipeNote[] recNotesList = new RecipeNote[length];;
+
+        for(int i = 0; i < length; i++) {
+            recNotesList[i] = new RecipeNote("Jane Doe", "June 5th 2019 11:55", "This Recipe is awesome!" );
+        }
+        return recNotesList;
+    }
 }

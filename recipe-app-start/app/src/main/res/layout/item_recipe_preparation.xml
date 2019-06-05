@@ -6,7 +6,7 @@
     android:background="@android:color/white">
 
     <TextView
-        android:id="@+id/rec_prep_step_number"
+        android:id="@+id/rec_prep_txt_step_nr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:lines="1"
@@ -17,10 +17,10 @@
         android:textColor="@android:color/black" />
 
     <TextView
-        android:id="@+id/rec_prep_step_desc"
+        android:id="@+id/rec_prep_txt_step_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/rec_prep_step_number"
+        android:layout_toRightOf="@id/rec_prep_txt_step_nr"
         android:lines="1"
         android:maxLines="1"
         android:paddingLeft="16dp"

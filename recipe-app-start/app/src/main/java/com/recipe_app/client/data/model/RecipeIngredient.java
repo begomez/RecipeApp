@@ -2,6 +2,7 @@ package com.recipe_app.client.data.model;
 
 public class RecipeIngredient {
 
+    private Recipe      recipe;
     private Ingredient  ingredient;
     private int         quantity;
     private String      uom;

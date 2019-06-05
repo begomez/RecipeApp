@@ -57,7 +57,7 @@ public class RecipeDetailFragmentIngr extends BaseFragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New Ingredient in Recipe!", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "New Ingredient added to the Recipe!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });*/

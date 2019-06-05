@@ -27,5 +27,7 @@
     <string name="tab_ingredients">Ingredients</string>
     <string name="tab_preparation">Preparation</string>
     <string name="tab_notes">Notes</string>
+    <string name="no_prep_steps_in_rec">Wow! No steps...! What an easy recipe! :-) </string>
+    <string name="no_notes_in_rec">Oups! Nobody said anything yet...! Be the first one! :-) </string>
 
 </resources>

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recipe_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        />
 
-        android:layout_gravity="center"
-        android:gravity="center"
-
-        android:text="3"
+    <TextView
+        android:id="@+id/list_recipe_notes_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@string/no_notes_in_rec"
         />
 
 </FrameLayout>
