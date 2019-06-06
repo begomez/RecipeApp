@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent">
 
     <ImageView
         android:id="@+id/splash_bg"
@@ -17,17 +17,17 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/title_side_margin"
-        android:layout_marginRight="@dimen/title_side_margin"
-        android:layout_marginTop="@dimen/title_top_margin" >
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/xlarge_margin" >
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:cropToPadding="false"
-            android:src="@drawable/splash_logo"
             android:layout_alignParentBottom="false"
             android:layout_alignParentEnd="true"
+            android:src="@drawable/splash_logo"
+            android:cropToPadding="false"
             />
     </LinearLayout>
 
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="Add ingredients"
+        android:text="@string/ingredients"
         />
 
     <com.recipe_app.client.ui.widget.ButtonWidget
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/btnAddIngredients"
-        android:text="Add recipes"
+        android:text="@string/recipes"
         />
 
 </RelativeLayout>

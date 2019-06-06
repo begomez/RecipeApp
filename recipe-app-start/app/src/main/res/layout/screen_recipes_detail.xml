@@ -8,14 +8,13 @@
 
     <ImageView
         android:id="@+id/recipe_img"
+        android:src="@drawable/curry"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="@dimen/detail_title_image_size"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:src="@drawable/curry"
-        android:scaleType="centerCrop"
-        android:cropToPadding="false"/>
+        style="@style/DetailTitleImage" />
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:layout_width="match_parent"
@@ -24,33 +23,25 @@
         android:layout_alignTop="@id/recipe_txt_name"
         android:layout_alignRight="@id/recipe_img"
         android:layout_alignBottom="@id/recipe_img"
-        android:background="#8888"/>
+        style="@style/DetailTitleBackgroundBox" />
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/recipe_txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/recipe_img"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:textSize="36sp"
-        android:textColor="@android:color/white"
-        android:maxLines="1"
-        android:lines="1"
-        android:text="Recipe Name" /> <!-- todo change to tools:text-->
+        android:text="Recipe Name"
+        style="@style/DetailTitleText"/>
+        <!-- todo change 'android:text' to 'tools:text'-->
 
     <ImageView
         android:id="@+id/recipe_edit_img"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:src="@drawable/baseline_create_white_48"
+        android:layout_width="@dimen/detail_title_button_size"
+        android:layout_height="@dimen/detail_title_button_size"
         android:layout_alignBottom="@id/recipe_img"
         android:layout_toRightOf="@id/recipe_txt_name"
-        android:paddingLeft="16dp"
-        android:paddingBottom="20dp"
-        android:src="@drawable/baseline_create_white_48"
-        android:scaleType="fitCenter"
-        android:cropToPadding="false"/>
+        style="@style/DetailTitleEditIcon"/>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/recipe_detail_tabs"

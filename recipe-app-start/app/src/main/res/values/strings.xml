@@ -19,10 +19,14 @@
     <string name="login_failed">"Login failed"</string>
 
     <!-- INGREDIENTS -->
+    <string name="ingredient">Ingredient</string>
+    <string name="ingredients">Ingredients</string>
     <string name="no_ingredients">No ingredients found</string>
     <string name="no_ingredients_in_rec">Wow! No ingredients...! What a tasteful recipe! :-) </string>
 
     <!-- RECIPES -->
+    <string name="recipe">Recipe</string>
+    <string name="recipes">Recipes</string>
     <string name="no_recipes">No recipes found</string>
     <string name="tab_ingredients">Ingredients</string>
     <string name="tab_preparation">Preparation</string>

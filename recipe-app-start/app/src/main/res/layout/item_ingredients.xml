@@ -15,27 +15,22 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:clipChildren="false"
-        android:clipToPadding="false">
+        style="@style/ListItem">
 
         <ImageView
             android:id="@+id/ingr_img"
+            android:src="@drawable/baseline_shopping_basket_black_48"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:src="@drawable/baseline_shopping_basket_black_48" />
+            style="@style/ListItemImage"/>
 
         <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/ingr_txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/ingr_img"
-            android:lines="1"
-            android:maxLines="1"
-            android:paddingTop="16dp"
-            android:textColor="@android:color/black"
-            android:text="Ingredient Name"/>
+            android:text="Ingredient Name"
+            style="@style/ListItemTitle"/>
 
         <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/ingr_txt_whereToBuy"
@@ -43,12 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ingr_txt_name"
             android:layout_toRightOf="@id/ingr_img"
-            android:lines="1"
-            android:maxLines="1"
-            android:paddingTop="8dp"
-            android:paddingBottom="16dp"
-            android:textColor="@android:color/darker_gray"
-            android:text="Store where to buy it"/>
+            android:text="Store where to buy it"
+            style="@style/ListItemSubTitleL1"/>
 
     </RelativeLayout>
 
