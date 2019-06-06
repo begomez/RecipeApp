@@ -7,7 +7,9 @@
 
     <!--Margins-->
     <dimen name="list_item_inner_padding">8dp</dimen>
-    <dimen name="list_item_outer_padding">16dp</dimen>
+    <dimen name="list_item_padding_top_bottom">16dp</dimen>
+    <dimen name="list_item_padding_left_minimum">16dp</dimen>
+    <dimen name="list_item_padding_left_large">56dp</dimen>
     <dimen name="detail_title_text_padding">16dp</dimen>
 
     <!--Dimensions-->

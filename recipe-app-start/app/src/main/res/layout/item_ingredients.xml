@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/ingr_img"
             android:text="Ingredient Name"
-            style="@style/ListItemTitle"/>
+            style="@style/ListItemTitle.Type1"/>
 
         <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/ingr_txt_whereToBuy"
@@ -39,7 +39,7 @@
             android:layout_below="@id/ingr_txt_name"
             android:layout_toRightOf="@id/ingr_img"
             android:text="Store where to buy it"
-            style="@style/ListItemSubTitleL1"/>
+            style="@style/ListItemSubtitle.Type1Column1"/>
 
     </RelativeLayout>
 
