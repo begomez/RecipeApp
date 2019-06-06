@@ -14,8 +14,22 @@
     </style>
 
     <style name="Title">
-        <item name="android:textSize"> </item>
+        <item name="android:textSize"> @dimen/big_font </item>
     </style>
+    <style name="Subtitle">
+        <item name="android:textSize"> @dimen/medium_font </item>
+    </style>
+    <style name="Content">
+        <item name="android:textSize"> @dimen/small_font </item>
+    </style>
+
+    <style name="Button_alignBottom">
+
+    </style>
+
+
+
+
 
     <!--<style name="RecipeHeader" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_width">fill_parent</item>

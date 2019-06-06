@@ -6,20 +6,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
+        android:id="@+id/splash_bg"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:src="@drawable/splash"
         android:scaleType="centerCrop"
-        android:cropToPadding="false"
-        android:id="@+id/splash_bg"
-        android:src="@drawable/splash" />
+        android:cropToPadding="false"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="70dp" >
+        android:layout_marginLeft="@dimen/title_side_margin"
+        android:layout_marginRight="@dimen/title_side_margin"
+        android:layout_marginTop="@dimen/title_top_margin" >
 
         <ImageView
             android:layout_width="fill_parent"
