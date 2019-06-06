@@ -17,7 +17,7 @@
         android:id="@+id/list_ingredients_empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@string/no_ingredients"
+        android:text="@string/no_ingredients"
         />
 
     <android.support.design.widget.FloatingActionButton

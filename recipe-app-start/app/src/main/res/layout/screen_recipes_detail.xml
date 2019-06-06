@@ -37,7 +37,7 @@
         android:textColor="@android:color/white"
         android:maxLines="1"
         android:lines="1"
-        android:text="Recipe Name" />
+        android:text="Recipe Name" /> <!-- todo change to tools:text-->
 
     <ImageView
         android:id="@+id/recipe_edit_img"
