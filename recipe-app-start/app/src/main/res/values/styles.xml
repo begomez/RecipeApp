@@ -13,59 +13,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="RecipeHeader" parent="@android:style/TextAppearance.Large">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:fontFamily">sans-serif-thin</item>
-    </style>
-
-    <style name="RecipeHeader.Title">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textSize">40sp</item>
-    </style>
-
-    <style name="RecipeHeader.Time">
-        <item name="android:fontFamily">sans-serif</item>
+    <style name="Title">
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="RecipeIngredients" parent="@android:style/TextAppearance.Large">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#656513</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textSize">18sp</item>
-    </style>
-
-    <style name="RecipeIngredients.Header" >
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textSize">30sp</item>
-    </style>
-
-    <style name="RecipeIngredients.Row" >
-    </style>
-
-    <style name="RecipeIngredients.Measurement" >
-    </style>
-
-    <style name="RecipeIngredients.Description">
-        <item name="android:fontFamily">sans-serif-light</item>
-    </style>
-
-    <style name="RecipeInstructions">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#656513</item>
-    </style>
-
-    <style name="RecipeInstructions.Title">
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textSize">30sp</item>
-    </style>
-
-    <style name="RecipeInstructions.Step">
-    </style>
 
 
 </resources>
