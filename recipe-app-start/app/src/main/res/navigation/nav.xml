@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav.xml">
+
+    <activity
+        android:id="@+id/home_dest"
+        android:name="com.recipe_app.client.ui.home.HomeScreen"
+        android:label="Home"
+        tools:layout="@layout/screen_home" >
+
+        <action
+            android:id="@+id/recipes_action"
+            app:destination="@+id/recipes_dest">
+        </action>
+
+        <action
+            android:id="@+id/ingredients_action"
+            app:destination="@+id/ingredients_dest">
+        </action>
+
+    </activity>
+
+    <activity
+        android:id="@+id/recipes_dest"
+        android:name="com.recipe_app.client.ui.recipes.RecipesScreen"
+        android:label="Recipes"
+        tools:layout="@layout/screen_recipes" ></activity>
+
+    <activity
+        android:id="@+id/recipes_detail_dest"
+        android:name="com.recipe_app.client.ui.recipes.RecipesDetailScreen"
+        android:label="Recipe detail"
+        tools:layout="@layout/screen_recipes_detail" ></activity>
+
+
+    <activity
+        android:id="@+id/ingredients_dest"
+        android:name="com.recipe_app.client.ui.ingredients.IngredientsScreen"
+        android:label="Ingredients"
+        tools:layout="@layout/screen_ingredients" ></activity>
+
+</navigation>

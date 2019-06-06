@@ -26,7 +26,7 @@
             android:padding="16dp"
             android:src="@drawable/baseline_shopping_basket_black_48" />
 
-        <TextView
+        <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/ingr_txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:textColor="@android:color/black"
             android:text="Ingredient Name"/>
 
-        <TextView
+        <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/ingr_txt_whereToBuy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

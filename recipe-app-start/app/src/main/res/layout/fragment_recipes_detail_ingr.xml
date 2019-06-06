@@ -11,7 +11,7 @@
         android:background="@android:color/white"
         />
 
-    <TextView
+    <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/list_recipe_ingredients_empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
