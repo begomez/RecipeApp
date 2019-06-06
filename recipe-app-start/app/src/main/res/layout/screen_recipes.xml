@@ -9,6 +9,9 @@
     <FrameLayout
         android:id="@+id/screen_recipes_frag_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
+        android:layout_height="wrap_content">
+
+
+    </FrameLayout>
 
 </RelativeLayout>

@@ -31,7 +31,7 @@
             />
     </LinearLayout>
 
-    <Button
+    <com.recipe_app.client.ui.widget.ButtonWidget
         android:id="@+id/btnAddIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:text="Add ingredients"
         />
 
-    <Button
+    <com.recipe_app.client.ui.widget.ButtonWidget
         android:id="@+id/btnAddRecipes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
