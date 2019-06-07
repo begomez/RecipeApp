@@ -38,7 +38,7 @@ public class RecipesDetailScreen extends BaseActivity {
 
 //      Custom Text Color
 //      Option A (no XML)
-      tabLayout.setTabTextColors(getResources().getColor(R.color.textColorPrimary), getResources().getColor(R.color.textColorPrimary));
+      tabLayout.setTabTextColors(getResources().getColor(R.color.textColorAccentLight), getResources().getColor(R.color.textColorPrimary));
 
 //      Custom Text Color
 //        Option B (with XML)
