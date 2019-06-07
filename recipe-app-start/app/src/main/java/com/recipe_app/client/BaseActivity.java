@@ -26,7 +26,7 @@ public class BaseActivity extends AppCompatActivity {
 
         this.setListeners();
 
-        this.configDrawer();
+        //this.configDrawer();
     }
 
     protected void setListeners() {
@@ -34,7 +34,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void configDrawer() {
-        DrawerLayout drawer = this.findViewById(R.id.drawer_view);
+        DrawerLayout drawer = this.findViewById(0);
         Toolbar toolbar = this.findViewById(R.id.toolbar_view);
 
         if (toolbar != null) {

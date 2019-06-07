@@ -4,29 +4,21 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white">
+    style="@style/ListItem">
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/rec_prep_txt_step_nr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:lines="1"
-        android:maxLines="1"
-        android:paddingLeft="56dp"
-        android:paddingTop="16dp"
         android:text="1."
-        android:textColor="@android:color/black" />
+        style="@style/ListItemSubtitle.Type3Column1"/>
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/rec_prep_txt_step_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/rec_prep_txt_step_nr"
-        android:lines="1"
-        android:maxLines="1"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
         android:text="Preparation description"
-        android:textColor="@android:color/black" />
+        style="@style/ListItemSubtitle.Type3Column2" />
 
 </RelativeLayout>

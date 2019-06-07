@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/rec_img"
             android:text="Recipe Name"
-            style="@style/ListItemTitle"/>
+            style="@style/ListItemTitle.Type1"/>
 
         <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/rec_txt_difficulty"
@@ -38,7 +38,7 @@
             android:layout_below="@id/rec_txt_name"
             android:layout_toRightOf="@id/rec_img"
             android:text="Difficulty"
-            style="@style/ListItemSubTitleL1"/>
+            style="@style/ListItemSubtitle.Type1Column1"/>
 
         <com.recipe_app.client.ui.widget.TextViewWidget
             android:id="@+id/rec_txt_timeToPrep"
@@ -47,7 +47,7 @@
             android:layout_below="@id/rec_txt_name"
             android:layout_toRightOf="@id/rec_txt_difficulty"
             android:text="(Time to Prepare)"
-            style="@style/ListItemSubTitleL2"/>
+            style="@style/ListItemSubtitle.Type1Column2"/>
 
     </RelativeLayout>
 

@@ -4,18 +4,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:layout_marginTop="24dp">
+    android:layout_marginTop="24dp"
+    style="@style/ListItem">
 
     <ImageView
         android:id="@+id/recipe_notes_who_img"
+        android:src="@drawable/baseline_face_black_48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:paddingLeft="16dp"
-        android:src="@drawable/baseline_face_black_48"
-        android:scaleType="centerCrop"
-        android:cropToPadding="false"/>
+        style="@style/ListItemSubtitle.Type4Photo"/>
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/recipe_notes_who_name"
@@ -23,12 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/recipe_notes_who_img"
         android:layout_alignParentTop="true"
-        android:paddingTop="4dp"
-        android:paddingLeft="8dp"
         android:text="Jane Doe"
-        android:lines="1"
-        android:maxLines="1"
-        android:textColor="@android:color/black" />
+        style="@style/ListItemSubtitle.Type4Header"/>
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/recipe_notes_text"
@@ -36,12 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/recipe_notes_who_img"
         android:layout_below="@id/recipe_notes_who_name"
-        android:paddingTop="2dp"
-        android:paddingLeft="8dp"
         android:text="This Recipe is awesome!"
-        android:lines="1"
-        android:maxLines="1"
-        android:textColor="@android:color/black" />
+        style="@style/ListItemSubtitle.Type4Content"/>
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:id="@+id/recipe_notes_when"
@@ -50,13 +40,7 @@
         android:layout_toRightOf="@id/recipe_notes_who_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:paddingTop="4dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="16dp"
         android:text="June 5th 2019 11:55"
-        android:lines="1"
-        android:maxLines="1"
-        android:gravity="right"
-        android:textColor="@android:color/black" />
+        style="@style/ListItemSubtitle.Type4Subheader"/>
 
 </RelativeLayout>

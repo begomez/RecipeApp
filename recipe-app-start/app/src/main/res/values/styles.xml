@@ -4,7 +4,6 @@
     <style name="CustomActionBarTheme" parent="Theme.AppCompat">
 
     </style>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -13,51 +12,220 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="Title">
-        <item name="android:textSize"> @dimen/font_large </item>
+    <!--<style name="Title">-->
+        <!--<item name="android:textSize"> @dimen/font_large </item>-->
+    <!--</style>-->
+    <!--<style name="Subtitle">-->
+        <!--<item name="android:textSize"> @dimen/font_medium </item>-->
+    <!--</style>-->
+    <!--<style name="Content">-->
+        <!--<item name="android:textSize"> @dimen/font_small </item>-->
+    <!--</style>-->
+
+    <style name="WhatTheFuck">
     </style>
-    <style name="Subtitle">
+
+    <!--    FONT SIZES      -->
+    <style name="ListItemTitle">
         <item name="android:textSize"> @dimen/font_medium </item>
     </style>
-    <style name="Content">
+    <style name="ListItemSubtitle">
         <item name="android:textSize"> @dimen/font_small </item>
     </style>
 
-    <!--    LIST SCREEN     -->
+
+    <!--    BUTTONS     -->
+
+    <style name="ButtonSquaredConfirm">
+        <item name="android:background"> @color/colorAccent</item>
+        <item name="android:textColor"> @color/textColorAccent</item>
+        <item name="android:textColorHighlight"> @color/textColorAccentLight</item>
+        <item name="android:layout_marginBottom"> @dimen/button_padding_minimum </item>
+        <item name="android:layout_marginLeft"> @dimen/button_padding_large </item>
+        <item name="android:layout_marginRight"> @dimen/button_padding_large </item>
+    </style>
+
+    <style name="ButtonFloatingAdd">
+        <item name="android:background"> @color/colorAccent</item>
+        <item name="android:textColor"> @color/textColorAccent</item>
+        <item name="android:textColorHighlight"> @color/textColorAccentLight</item>
+    </style>
+
+    <!--    LISTS     -->
+    <style name="List">
+        <item name="android:background"> @color/textColorPrimary </item>
+    </style>
+
+    <style name="ListButtonAdd">
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <!--    LIST ITEMS     -->
     <style name="ListItem">
-        <item name="android:background"> @android:color/white </item>
+        <item name="android:background"> @color/textColorPrimary </item>
         <item name="android:clipChildren"> false </item>
         <item name="android:clipToPadding"> false </item>
     </style>
 
     <style name="ListItemImage">
-        <item name="android:padding"> @dimen/list_item_outer_padding </item>
+        <item name="android:padding">@dimen/list_item_padding_top_bottom</item>
     </style>
 
-    <style name="ListItemTitle">
+
+    <!--
+            LIST ITEM: TYPE 1
+
+            Sample:
+         ___________________________________________
+        |                                           |
+        |             Title                         |   <== ListItemTitle
+        | (photo)                                   |
+        |             Column1   Column2             |   <== ListItemSubtitle
+        |___________________________________________|                                          |
+
+    -->
+
+    <style name="ListItemTitle.Type1">
         <item name="android:lines"> 1 </item>
         <item name="android:maxLines"> 1 </item>
-        <item name="android:paddingTop"> @dimen/list_item_outer_padding </item>
-        <item name="android:textColor"> @android:color/black </item>
-        <item name="android:textSize"> @dimen/font_large </item>
+        <item name="android:paddingTop">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccent </item>
     </style>
 
-    <style name="ListItemSubTitleL1">
+    <style name="ListItemSubtitle.Type1Column1">
         <item name="android:lines"> 1 </item>
         <item name="android:maxLines"> 1 </item>
         <item name="android:paddingTop"> @dimen/list_item_inner_padding </item>
-        <item name="android:paddingBottom"> @dimen/list_item_outer_padding </item>
-        <item name="android:textColor"> @android:color/darker_gray </item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccentLight </item>
     </style>
 
-    <style name="ListItemSubTitleL2">
+    <style name="ListItemSubtitle.Type1Column2">
         <item name="android:lines"> 1 </item>
         <item name="android:maxLines"> 1 </item>
         <item name="android:paddingTop"> @dimen/list_item_inner_padding </item>
         <item name="android:paddingLeft"> @dimen/list_item_inner_padding </item>
-        <item name="android:paddingBottom"> @dimen/list_item_outer_padding </item>
-        <item name="android:textColor"> @android:color/darker_gray </item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccentLight </item>
     </style>
+
+
+    <!--
+            LIST ITEM: TYPE 2
+
+            Sample:
+         ___________________________________________
+        |                                           |
+        |  Col1   Col2     Column3                  |   <== ListItemSubtitle
+        |___________________________________________|
+
+    -->
+
+    <style name="ListItemSubtitle.Type2Column1">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft"> @dimen/list_item_padding_left_minimum </item>
+        <item name="android:paddingTop"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:paddingBottom"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <style name="ListItemSubtitle.Type2Column2">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft"> @dimen/list_item_padding_left_minimum </item>
+        <item name="android:paddingTop"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:paddingBottom"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <style name="ListItemSubtitle.Type2Column3">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft"> @dimen/list_item_padding_left_large </item>
+        <item name="android:paddingTop"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:paddingBottom"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <!--
+            LIST ITEM: TYPE 3
+
+            Sample:
+         ___________________________________________
+        |                                           |
+        |   Column1   Column2                       |   <== ListItemSubtitle
+        |___________________________________________|
+    -->
+
+    <style name="ListItemSubtitle.Type3Column1">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft"> @dimen/list_item_padding_left_large </item>
+        <item name="android:paddingTop"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:paddingBottom"> @dimen/list_item_padding_top_bottom </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <style name="ListItemSubtitle.Type3Column2">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft">@dimen/list_item_padding_left_minimum</item>
+        <item name="android:paddingTop">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <!--
+                LIST ITEM: TYPE 4
+
+                Sample:
+             ___________________________________________
+            |                                           |
+            |             Header             Subheader  |   <== ListItemSubtitle
+            |  (photo)                                  |
+            |             Content                       |   <== ListItemSubtitle
+            |___________________________________________|
+
+        -->
+
+    <style name="ListItemSubtitle.Type4Photo">
+        <item name="android:paddingLeft">@dimen/list_item_padding_left_minimum</item>
+        <item name="android:paddingTop">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:scaleType">centerCrop </item>
+        <item name="android:cropToPadding">false </item>
+    </style>
+
+    <style name="ListItemSubtitle.Type4Header">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft">@dimen/list_item_padding_left_minimum</item>
+        <item name="android:paddingTop">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <style name="ListItemSubtitle.Type4Subheader">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingLeft">@dimen/list_item_padding_left_minimum</item>
+        <item name="android:paddingRight">@dimen/list_item_padding_inner_large</item>
+        <item name="android:paddingTop">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+    </style>
+
+    <style name="ListItemSubtitle.Type4Content">
+        <item name="android:lines"> 1 </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:paddingLeft">@dimen/list_item_padding_left_minimum</item>
+        <item name="android:paddingBottom">@dimen/list_item_padding_top_bottom</item>
+        <item name="android:textColor"> @color/textColorAccentLight </item>
+    </style>
+
+
+
 
     <!--    DETAIL SCREEN   -->
     <style name="DetailTitleImage">
@@ -69,7 +237,7 @@
         <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
         <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
         <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
-        <item name="android:textColor"> @android:color/white </item>
+        <item name="android:textColor"> @color/textColorPrimary </item>
         <item name="android:maxLines">1</item>
         <item name="android:lines">1</item>
     </style>
@@ -85,9 +253,7 @@
         <item name="android:cropToPadding"> false </item>
     </style>
 
-    <style name="Button_alignBottom">
 
-    </style>
 
 
 
