@@ -13,7 +13,17 @@
         android:scaleType="centerCrop"
         android:cropToPadding="false"/>
 
+    <com.recipe_app.client.ui.widget.TextViewWidget
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/splash_bg"
+        android:layout_alignTop="@id/splash_logo"
+        android:layout_alignRight="@id/splash_bg"
+        android:layout_alignBottom="@id/splash_logo"
+        style="@style/DetailTitleBackgroundBox" />
+
     <LinearLayout
+        android:id="@+id/splash_logo"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -38,6 +48,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="@string/ingredients"
+        style="@style/ButtonSquaredConfirm"
         />
 
     <com.recipe_app.client.ui.widget.ButtonWidget
@@ -46,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/btnAddIngredients"
         android:text="@string/recipes"
+        style="@style/ButtonSquaredConfirm"
         />
 
 </RelativeLayout>

@@ -6,13 +6,24 @@
     <dimen name="font_large"> 36sp </dimen>
 
     <!--Margins-->
-    <dimen name="list_item_inner_padding">8dp</dimen>
-    <dimen name="list_item_padding_top_bottom">16dp</dimen>
-    <dimen name="list_item_padding_left_minimum">16dp</dimen>
-    <dimen name="list_item_padding_left_large">56dp</dimen>
-    <dimen name="detail_title_text_padding">16dp</dimen>
+    <dimen name="button_padding_minimum">      16dp        </dimen>
+    <dimen name="button_padding_large">        56dp        </dimen>
+
+    <dimen name="list_item_padding_top_bottom">     16dp        </dimen>
+    <dimen name="list_item_padding_left_large">     56dp        </dimen>
+    <dimen name="list_item_padding_left_minimum">   16dp        </dimen>
+    <dimen name="list_item_padding_inner_large">    8dp         </dimen>
+    <dimen name="list_item_padding_inner_medium">   4dp         </dimen>
+    <dimen name="list_item_padding_inner_small">    2dp         </dimen>
+
+    <dimen name="list_item_inner_padding">          8dp         </dimen>
+
+
+    <dimen name="detail_title_text_padding">        16dp        </dimen>
 
     <!--Dimensions-->
+    <dimen name="button_size_minimum"> 48dp </dimen>
+
     <dimen name="detail_title_image_size">250dp</dimen>
     <dimen name="detail_title_button_size">48dp</dimen>
 
