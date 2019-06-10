@@ -37,22 +37,11 @@ public class HomeScreen extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
-    @Override
-    protected void setListeners() {
-        super.setListeners();
+    protected int getDrawerViewID() {
+        return R.id.drawer_view;
+    }
 
-        ((Button) this.findViewById(R.id.btnAddIngredients)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigator.toIngredients(HomeScreen.this, new Bundle());
-            }
-        });
-
-        ((Button) this.findViewById(R.id.btnAddRecipes)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigator.toRecipes(HomeScreen.this, new Bundle());
-            }
-        });
+    protected int getToolbarViewID() {
+        return R.id.toolbar_view;
     }
 }

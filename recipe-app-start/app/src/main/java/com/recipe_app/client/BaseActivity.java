@@ -10,8 +10,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
+
+import com.recipe_app.client.ui.widget.ToolbarWidget;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -26,18 +28,26 @@ public class BaseActivity extends AppCompatActivity {
 
         this.setListeners();
 
-        //this.configDrawer();
+        this.configDrawer();
     }
 
     protected void setListeners() {
 
     }
 
-    protected void configDrawer() {
-        DrawerLayout drawer = this.findViewById(0);
-        Toolbar toolbar = this.findViewById(R.id.toolbar_view);
+    protected int getDrawerViewID() {
+        return 0;
+    }
 
-        if (toolbar != null) {
+    protected int getToolbarViewID() {
+        return 0;
+    }
+
+    protected void configDrawer() {
+        final DrawerLayout drawer = this.findViewById(getDrawerViewID());
+        Toolbar toolbar = this.findViewById(getToolbarViewID());
+
+        if ((drawer != null) && (toolbar != null)) {
             this.setSupportActionBar(toolbar);
 
             this.getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -56,9 +66,11 @@ public class BaseActivity extends AppCompatActivity {
                         switch (menuItem.getItemId()) {
                             case R.id.menu_rec:
                                 Navigator.toRecipes(BaseActivity.this, new Bundle());
+                                drawer.closeDrawer(Gravity.LEFT);
                                 break;
                             case R.id.menu_ingr:
                                 Navigator.toIngredients(BaseActivity.this, new Bundle());
+                                drawer.closeDrawer(Gravity.LEFT);
                                 break;
                             default:
                                 break;
