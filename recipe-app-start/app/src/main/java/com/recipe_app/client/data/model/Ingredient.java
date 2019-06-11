@@ -1,6 +1,9 @@
 package com.recipe_app.client.data.model;
 
-public class Ingredient {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Ingredient implements Parcelable {
 
     private String photo;
     private String name;
@@ -15,6 +18,38 @@ public class Ingredient {
         this.whereToBuy = whereToBuy;
         this.notes = notes;
     }
+
+    protected Ingredient(Parcel in) {
+        photo = in.readString();
+        name = in.readString();
+        whereToBuy = in.readString();
+        notes = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(photo);
+        dest.writeString(name);
+        dest.writeString(whereToBuy);
+        dest.writeString(notes);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Ingredient> CREATOR = new Creator<Ingredient>() {
+        @Override
+        public Ingredient createFromParcel(Parcel in) {
+            return new Ingredient(in);
+        }
+
+        @Override
+        public Ingredient[] newArray(int size) {
+            return new Ingredient[size];
+        }
+    };
 
     public String getName() {
         return name;

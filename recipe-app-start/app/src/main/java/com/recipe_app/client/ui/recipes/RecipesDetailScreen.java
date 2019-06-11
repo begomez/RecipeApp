@@ -1,6 +1,7 @@
 package com.recipe_app.client.ui.recipes;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -10,14 +11,29 @@ import android.widget.TextView;
 
 import com.recipe_app.client.BaseActivity;
 import com.recipe_app.client.R;
+import com.recipe_app.client.data.model.Recipe;
+import com.recipe_app.client.ui.ExtrasFactory;
 
 
 public class RecipesDetailScreen extends BaseActivity {
+
+    private Recipe target;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         this.layout = R.layout.screen_recipes_detail;
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void extractExtras(Intent i) {
+        super.extractExtras(i);
+
+        Bundle b = i.getExtras();
+
+        if (b.containsKey(ExtrasFactory.Params.PARAM_RECIPE)) {
+            this.target = b.getParcelable(ExtrasFactory.Params.PARAM_RECIPE);
+        }
     }
 
     @Override

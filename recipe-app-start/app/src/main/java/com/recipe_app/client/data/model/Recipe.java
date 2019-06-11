@@ -1,6 +1,9 @@
 package com.recipe_app.client.data.model;
 
-public class Recipe {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Recipe implements Parcelable {
 
     private String photo;
     private String name;
@@ -20,6 +23,42 @@ public class Recipe {
         this.timeToPrepare = timeToPrepare;
         this.levelOfDifficulty = levelOfDifficulty;
     }
+
+    protected Recipe(Parcel in) {
+        photo = in.readString();
+        name = in.readString();
+        preparation = in.readString();
+        timeToPrepare = in.readString();
+        levelOfDifficulty = in.readString();
+        notes = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(photo);
+        dest.writeString(name);
+        dest.writeString(preparation);
+        dest.writeString(timeToPrepare);
+        dest.writeString(levelOfDifficulty);
+        dest.writeString(notes);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Recipe> CREATOR = new Creator<Recipe>() {
+        @Override
+        public Recipe createFromParcel(Parcel in) {
+            return new Recipe(in);
+        }
+
+        @Override
+        public Recipe[] newArray(int size) {
+            return new Recipe[size];
+        }
+    };
 
     public String getName() {
         return name;

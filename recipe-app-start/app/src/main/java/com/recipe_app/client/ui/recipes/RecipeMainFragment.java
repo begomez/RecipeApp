@@ -4,7 +4,6 @@ package com.recipe_app.client.ui.recipes;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -13,10 +12,18 @@ import com.recipe_app.client.BaseActivity;
 import com.recipe_app.client.BaseFragment;
 import com.recipe_app.client.Navigator;
 import com.recipe_app.client.R;
-import com.recipe_app.client.ui.ingredients.IngredientsAdapter;
+import com.recipe_app.client.data.model.DummyData;
+import com.recipe_app.client.data.model.Recipe;
 
 
 public class RecipeMainFragment extends BaseFragment {
+
+    private IRecipeClick onRecipeClickListener = new IRecipeClick() {
+        @Override
+        public void onRecipeClick(Recipe recipe) {
+            Navigator.toRecipesDetail((BaseActivity) getActivity(), new Bundle());
+        }
+    };
 
     public static RecipeMainFragment getInstance() {
         return getInstance(new Bundle());
@@ -53,7 +60,8 @@ public class RecipeMainFragment extends BaseFragment {
 //                                                                                    ((LinearLayoutManager) layoutManager).getOrientation());
 //        recyclerView.addItemDecoration(mDividerItemDecoration);
 
-        RecipeAdapter mAdapter = new RecipeAdapter();            //TODO database
+        RecipeAdapter mAdapter = new RecipeAdapter(DummyData.getListOfRecipes(15), onRecipeClickListener);            //TODO database
+
         recyclerView.setAdapter(mAdapter);
     }
 

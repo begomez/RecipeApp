@@ -9,11 +9,23 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.recipe_app.client.BaseActivity;
 import com.recipe_app.client.BaseFragment;
+import com.recipe_app.client.Navigator;
 import com.recipe_app.client.R;
+import com.recipe_app.client.data.model.DummyData;
+import com.recipe_app.client.data.model.Ingredient;
+import com.recipe_app.client.ui.ExtrasFactory;
 
 
 public class IngredientsMainFragment extends BaseFragment {
+
+    private IIngredientClick onIngrClickListener = new IIngredientClick() {
+        @Override
+        public void onIngredientClick(Ingredient ingr) {
+            Navigator.toIngredients((BaseActivity) getActivity(), ExtrasFactory.getIngredientExtras(ingr));
+        }
+    };
 
     public static IngredientsMainFragment getInstance() {
         return getInstance(new Bundle());
@@ -50,7 +62,7 @@ public class IngredientsMainFragment extends BaseFragment {
 //                                                                                    ((LinearLayoutManager) layoutManager).getOrientation());
 //        recyclerView.addItemDecoration(mDividerItemDecoration);
 
-        IngredientsAdapter mAdapter = new IngredientsAdapter();            //TODO database
+        IngredientsAdapter mAdapter = new IngredientsAdapter(DummyData.getListOfIngredients(15), onIngrClickListener);
         recyclerView.setAdapter(mAdapter);
     }
 
