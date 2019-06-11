@@ -225,13 +225,15 @@
     </style>
 
 
+    <!--
+                DETAIL SCREEN: TYPE 1
 
-
-    <!--    DETAIL SCREEN   -->
+     -->
     <style name="DetailTitleImage">
         <item name="android:scaleType"> centerCrop </item>
         <item name="android:cropToPadding"> false </item>
     </style>
+
     <style name="DetailTitleText">
         <item name="android:textSize"> @dimen/font_large </item>
         <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
@@ -253,8 +255,37 @@
         <item name="android:cropToPadding"> false </item>
     </style>
 
+    <!--
+               DETAIL SCREEN: TYPE 2
 
-
+    -->
+    <style name="DetailTitleImageType2">
+        <item name="android:scaleType"> centerCrop </item>
+        <item name="android:cropToPadding"> false </item>
+        <item name="android:layout_marginTop"> 48dp </item>
+        <item name="android:layout_marginBottom"> 48dp </item>
+        <item name="android:layout_marginLeft"> 48dp </item>
+        <item name="android:layout_marginRight"> 48dp </item>
+    </style>
+    <style name="DetailTitleTextType2">
+        <item name="android:textSize"> @dimen/font_medium </item>
+        <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:lines"> 1 </item>
+    </style>
+    <style name="DetailTitleEditTextType2">
+        <item name="android:textSize"> @dimen/font_medium </item>
+        <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:lines"> 1 </item>
+        <item name="android:gravity">top|right </item>
+    </style>
 
 
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ingr_dtl_img"
+            style="@style/DetailTitleImageType2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/curry" />
+
+        <com.recipe_app.client.ui.widget.EditTextWidget
+            android:id="@+id/ingr_edittxt_dtl_name"
+            style="@style/DetailTitleEditTextType2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingr_dtl_img"
+            android:layout_alignLeft="@id/ingr_dtl_img"
+            android:layout_alignRight="@id/ingr_dtl_img"
+            android:gravity="top|right"
+            android:hint="Ingredient Name"/>
+
+        <com.recipe_app.client.ui.widget.EditTextWidget
+            android:id="@+id/ingr_edittxt_whereToBuy"
+            style="@style/DetailTitleEditTextType2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingr_edittxt_dtl_name"
+            android:layout_alignLeft="@id/ingr_dtl_img"
+            android:layout_alignRight="@id/ingr_dtl_img"
+            android:gravity="top|right"
+            android:hint="Where?"/>
+
+        <com.recipe_app.client.ui.widget.EditTextWidget
+            android:id="@+id/ingr_edittxt_notes"
+            style="@style/DetailTitleEditTextType2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingr_edittxt_whereToBuy"
+            android:layout_alignLeft="@id/ingr_dtl_img"
+            android:layout_alignRight="@id/ingr_dtl_img"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:lines="4"
+            android:gravity="top|right"
+            android:scrollbars="vertical"
+            android:hint="Notes"/>
+
+        <com.recipe_app.client.ui.widget.ButtonWidget
+            android:id="@+id/btnSaveIngredient"
+            style="@style/ButtonSquaredConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingr_edittxt_notes"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/save" />
+
+
+    </RelativeLayout>
+</ScrollView>
