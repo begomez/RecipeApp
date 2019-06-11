@@ -23,7 +23,8 @@ public class IngredientsMainFragment extends BaseFragment {
     private IIngredientClick onIngrClickListener = new IIngredientClick() {
         @Override
         public void onIngredientClick(Ingredient ingr) {
-            Navigator.toIngredients((BaseActivity) getActivity(), ExtrasFactory.getIngredientExtras(ingr));
+            //TODO: call when exists
+            //Navigator.toIngredientsDetail((BaseActivity) getActivity(), ExtrasFactory.getIngredientExtras(ingr));
         }
     };
 

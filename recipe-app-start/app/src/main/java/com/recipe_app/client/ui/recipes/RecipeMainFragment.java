@@ -14,6 +14,7 @@ import com.recipe_app.client.Navigator;
 import com.recipe_app.client.R;
 import com.recipe_app.client.data.model.DummyData;
 import com.recipe_app.client.data.model.Recipe;
+import com.recipe_app.client.ui.ExtrasFactory;
 
 
 public class RecipeMainFragment extends BaseFragment {
@@ -21,7 +22,7 @@ public class RecipeMainFragment extends BaseFragment {
     private IRecipeClick onRecipeClickListener = new IRecipeClick() {
         @Override
         public void onRecipeClick(Recipe recipe) {
-            Navigator.toRecipesDetail((BaseActivity) getActivity(), new Bundle());
+            Navigator.toRecipesDetail((BaseActivity) getActivity(), ExtrasFactory.getRecipeExtras(recipe));
         }
     };
 

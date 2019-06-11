@@ -33,6 +33,8 @@ public class RecipesDetailScreen extends BaseActivity {
 
         if (b.containsKey(ExtrasFactory.Params.PARAM_RECIPE)) {
             this.target = b.getParcelable(ExtrasFactory.Params.PARAM_RECIPE);
+        } else {
+            //TODO:...
         }
     }
 
