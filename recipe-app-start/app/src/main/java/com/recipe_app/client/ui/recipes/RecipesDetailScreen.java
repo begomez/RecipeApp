@@ -73,6 +73,10 @@ public class RecipesDetailScreen extends BaseActivity {
 
     private void setViewData() {
         TextViewWidget txtRecipeName = ((TextViewWidget) this.findViewById(R.id.recipe_txt_name));
-        txtRecipeName.setText(target.getName());
+        if(target != null) {
+            txtRecipeName.setText(target.getName());
+        } else {
+            txtRecipeName.setText("Recipe Name");
+        }
     }
 }

@@ -48,10 +48,18 @@ public class IngredientsDetailScreen extends BaseActivity {
     }
 
     private void setViewData() {
-//        EditTextWidget edtxtIngredientName = ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_dtl_name));
-//        edtxtIngredientName.setText(target.getName());
-        ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_dtl_name)).setText(target.getName());
-        ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_whereToBuy)).setText(target.getWhereToBuy());
-        ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_notes)).setText(target.getNotes());
+        EditTextWidget editxtIngrName = ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_dtl_name));
+        EditTextWidget editxtIngrWhereToBuy = ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_whereToBuy));
+        EditTextWidget editxtIngrNotes = ((EditTextWidget) this.findViewById(R.id.ingr_edittxt_notes));
+
+        if(target != null) {
+            editxtIngrName.setText(target.getName());
+            editxtIngrWhereToBuy.setText(target.getWhereToBuy());
+            editxtIngrNotes.setText(target.getNotes());
+        } else {
+            editxtIngrName.setText("Ingredient Name");
+            editxtIngrWhereToBuy.setText("Shop Name");
+            editxtIngrNotes.setText("Enter some notes");
+        }
     }
 }

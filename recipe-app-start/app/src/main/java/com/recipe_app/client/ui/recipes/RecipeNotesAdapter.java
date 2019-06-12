@@ -11,10 +11,12 @@ import com.recipe_app.client.data.model.DummyData;
 import com.recipe_app.client.data.model.RecipeNote;
 import com.recipe_app.client.data.model.RecipePreparation;
 
+import java.util.ArrayList;
+
 
 public class RecipeNotesAdapter extends RecyclerView.Adapter<RecipeNotesAdapter.RecipeNoteViewHolder> {
 
-    private RecipeNote[] data;
+    private ArrayList<RecipeNote> data;
 
     public static class RecipeNoteViewHolder extends RecyclerView.ViewHolder {
 
@@ -52,15 +54,15 @@ public class RecipeNotesAdapter extends RecyclerView.Adapter<RecipeNotesAdapter.
     public void onBindViewHolder(RecipeNoteViewHolder holder, int i) {
         if(data != null) { //TODO needed?
 //            holder.imgNoteMadeBy.setImageDrawable();
-            holder.txtNoteMadeBy.setText(data[i].getNoteMadeBy());
-            holder.txtNoteMadeOn.setText(data[i].getNoteMadeOn());
-            holder.txtNoteText.setText(data[i].getNoteText());
+            holder.txtNoteMadeBy.setText(data.get(i).getNoteMadeBy());
+            holder.txtNoteMadeOn.setText(data.get(i).getNoteMadeOn());
+            holder.txtNoteText.setText(data.get(i).getNoteText());
         }
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return data.size();
     }
 
     /*

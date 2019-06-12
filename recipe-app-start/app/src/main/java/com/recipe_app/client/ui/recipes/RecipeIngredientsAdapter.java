@@ -11,10 +11,12 @@ import com.recipe_app.client.data.model.DummyData;
 import com.recipe_app.client.data.model.Ingredient;
 import com.recipe_app.client.data.model.RecipeIngredient;
 
+import java.util.ArrayList;
+
 
 public class RecipeIngredientsAdapter extends RecyclerView.Adapter<RecipeIngredientsAdapter.RecipeIngredientsViewHolder> {
 
-    private RecipeIngredient[] data;
+    private ArrayList<RecipeIngredient> data;
 
     public static class RecipeIngredientsViewHolder extends RecyclerView.ViewHolder {
 
@@ -51,15 +53,15 @@ public class RecipeIngredientsAdapter extends RecyclerView.Adapter<RecipeIngredi
 
         if(data != null) { //TODO needed?
             //holder.imgIngr.setImageDrawable(data[i].getPhoto()); //TODO Photo
-            holder.txtNameIngr.setText(data[i].getIngredient().getName());
-            holder.txtQuantity.setText(""+data[i].getQuantity());
-            holder.txtUOM.setText(data[i].getUom());
+            holder.txtNameIngr.setText(data.get(i).getIngredient().getName());
+            holder.txtQuantity.setText(""+data.get(i).getQuantity());
+            holder.txtUOM.setText(data.get(i).getUom());
         }
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return data.size();
     }
 
     /*

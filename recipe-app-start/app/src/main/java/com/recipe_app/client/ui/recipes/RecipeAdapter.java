@@ -12,13 +12,14 @@ import com.recipe_app.client.data.model.DummyData;
 import com.recipe_app.client.data.model.Ingredient;
 import com.recipe_app.client.data.model.Recipe;
 
+import java.util.ArrayList;
+
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder> {
-    private Recipe[] data;
+    private ArrayList<Recipe> data;
     private IRecipeClick callback;
 
-
-    public RecipeAdapter(Recipe[] data, IRecipeClick callback){
+    public RecipeAdapter(ArrayList<Recipe> data, IRecipeClick callback){
         this.data = data;
         this.callback = callback;
     }
@@ -32,14 +33,14 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     @Override
     public void onBindViewHolder(RecipeViewHolder holder, int i) {
         //holder.imgRec.setImageDrawable(data[i].getPhoto()); //TODO
-        holder.txtNameRec.setText(data[i].getName());
-        holder.txtDifficulty.setText(data[i].getLevelOfDifficulty());
-        holder.txtTimeToPrep.setText(data[i].getTimeToPrepare());
+        holder.txtNameRec.setText(data.get(i).getName());
+        holder.txtDifficulty.setText(data.get(i).getLevelOfDifficulty());
+        holder.txtTimeToPrep.setText(data.get(i).getTimeToPrepare());
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return data.size();
     }
 
     /**
@@ -74,7 +75,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
                 public void onClick(View v) {
                     int pos = getAdapterPosition();
 
-                    callback.onRecipeClick(data[pos]);
+                    callback.onRecipeClick(data.get(pos));
                 }
             });
         }

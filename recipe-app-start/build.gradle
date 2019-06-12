@@ -30,7 +30,7 @@ allprojects {
     }
 }
 
-ext {
-    roomVersion = '2.1.0-alpha04'
-    archLifecycleVersion = '2.0.0'
-}
+//ext {
+//    roomVersion = '2.1.0-alpha04'
+//    archLifecycleVersion = '2.0.0'
+//}
