@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        style="@style/DetailTitleImage" />
+        style="@style/DetailTabsTitleImage" />
 
     <com.recipe_app.client.ui.widget.TextViewWidget
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/recipe_img"
         android:text="Recipe Name"
-        style="@style/DetailTitleText"/>
+        style="@style/DetailTabsTitleText"/>
         <!-- todo change 'android:text' to 'tools:text'-->
 
     <ImageView
@@ -41,7 +41,7 @@
         android:layout_height="@dimen/detail_title_button_size"
         android:layout_alignBottom="@id/recipe_img"
         android:layout_toRightOf="@id/recipe_txt_name"
-        style="@style/DetailTitleEditIcon"/>
+        style="@style/DetailTabsTitleEditIcon"/>
 
     <android.support.design.widget.TabLayout
         android:id="@+id/recipe_detail_tabs"

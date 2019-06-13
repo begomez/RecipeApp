@@ -16,6 +16,39 @@ import java.util.ArrayList;
 
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder> {
+    /**
+     *
+     */
+    public class RecipeViewHolder extends RecyclerView.ViewHolder {
+
+        public ImageView imgRec;
+        public TextView txtNameRec;
+        public TextView txtDifficulty;
+        public TextView txtTimeToPrep;
+
+        public RecipeViewHolder(ViewGroup itemView) {
+            super(itemView);
+            this.bindViews();
+            this.setListeners();
+        }
+        private void bindViews() {
+            this.imgRec = (ImageView)itemView.findViewById(R.id.rec_img);
+            this.txtNameRec = (TextView) itemView.findViewById(R.id.rec_txt_name);
+            this.txtDifficulty = (TextView)itemView.findViewById(R.id.rec_txt_difficulty);
+            this.txtTimeToPrep = (TextView)itemView.findViewById(R.id.rec_txt_timeToPrep);
+        }
+        private void setListeners() {
+            this.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition();
+
+                    callback.onRecipeClick(data.get(pos));
+                }
+            });
+        }
+    }
+
     private ArrayList<Recipe> data;
     private IRecipeClick callback;
 
@@ -32,52 +65,26 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
 
     @Override
     public void onBindViewHolder(RecipeViewHolder holder, int i) {
-        //holder.imgRec.setImageDrawable(data[i].getPhoto()); //TODO
-        holder.txtNameRec.setText(data.get(i).getName());
-        holder.txtDifficulty.setText(data.get(i).getLevelOfDifficulty());
-        holder.txtTimeToPrep.setText(data.get(i).getTimeToPrepare());
+        if(data != null) {
+            //holder.imgRec.setImageDrawable(data[i].getPhoto()); //TODO
+            holder.txtNameRec.setText(data.get(i).getName());
+            holder.txtDifficulty.setText(data.get(i).getLevelOfDifficulty());
+            holder.txtTimeToPrep.setText(data.get(i).getTimeToPrepare());
+        } else {
+            // Covers the case of data not being ready yet
+        }
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        if(data != null)
+            return data.size();
+        else return 0;
     }
 
-    /**
-     *
-     */
-    public class RecipeViewHolder extends RecyclerView.ViewHolder {
-
-        public ImageView imgRec;
-        public TextView txtNameRec;
-        public TextView txtDifficulty;
-        public TextView txtTimeToPrep;
-
-        public RecipeViewHolder(ViewGroup itemView) {
-            super(itemView);
-
-            this.bindViews();
-
-            this.setListeners();
-        }
-
-
-        private void bindViews() {
-            this.imgRec = (ImageView)itemView.findViewById(R.id.rec_img);
-            this.txtNameRec = (TextView) itemView.findViewById(R.id.rec_txt_name);
-            this.txtDifficulty = (TextView)itemView.findViewById(R.id.rec_txt_difficulty);
-            this.txtTimeToPrep = (TextView)itemView.findViewById(R.id.rec_txt_timeToPrep);
-        }
-
-        private void setListeners() {
-            this.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int pos = getAdapterPosition();
-
-                    callback.onRecipeClick(data.get(pos));
-                }
-            });
-        }
+    public void setRecipes(ArrayList<Recipe> data) {
+        this.data = data;
+        notifyDataSetChanged();
     }
+
 }

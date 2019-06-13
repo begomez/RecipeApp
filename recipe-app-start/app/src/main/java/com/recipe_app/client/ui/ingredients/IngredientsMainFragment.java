@@ -63,6 +63,8 @@ public class IngredientsMainFragment extends BaseFragment {
 //                                                                                    ((LinearLayoutManager) layoutManager).getOrientation());
 //        recyclerView.addItemDecoration(mDividerItemDecoration);
 
+        //TODO load ingredients from database
+
         IngredientsAdapter mAdapter = new IngredientsAdapter(DummyData.getListOfIngredients(15), onIngrClickListener);
         recyclerView.setAdapter(mAdapter);
     }
