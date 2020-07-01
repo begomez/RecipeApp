@@ -10,14 +10,22 @@ import android.widget.TextView;
 import com.recipe_app.client.R;
 import com.recipe_app.client.data.model.Ingredient;
 
+import java.util.ArrayList;
+
 
 public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.IngredientsViewHolder> {
 
-    private Ingredient[] data;
+//    private Ingredient[] data;
+    private ArrayList<Ingredient> data;
     private IIngredientClick callback;
 
 
-    public IngredientsAdapter(Ingredient[] data, IIngredientClick callback){
+//    public IngredientsAdapter(Ingredient[] data, IIngredientClick callback){
+//        this.data = data;
+//        this.callback = callback;
+//    }
+
+    public IngredientsAdapter(ArrayList<Ingredient> data, IIngredientClick callback){
         this.data = data;
         this.callback = callback;
     }
@@ -31,13 +39,21 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
     @Override
     public void onBindViewHolder(IngredientsViewHolder holder, int i) {
         //holder.imgIngr.setImageDrawable(data[i].getPhoto()); //TODO
-        holder.txtNameIngr.setText(data[i].getName());
-        holder.txtWhereToBuy.setText(data[i].getWhereToBuy());
+//        holder.txtNameIngr.setText(data[i].getName());
+//        holder.txtWhereToBuy.setText(data[i].getWhereToBuy());
+
+        holder.txtNameIngr.setText(data.get(i).getName());
+        holder.txtWhereToBuy.setText(data.get(i).getWhereToBuy());
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        if(data != null) {
+//            return data.length;
+            return data.size();
+        } else {
+            return 0;
+        }
     }
 
     /**
@@ -68,8 +84,8 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsAdapter.
                 @Override
                 public void onClick(View v) {
                     int pos = getAdapterPosition();
-
-                    callback.onIngredientClick(data[pos]);
+//                    callback.onIngredientClick(data[pos]);
+                    callback.onIngredientClick(data.get(pos));
                 }
             });
         }

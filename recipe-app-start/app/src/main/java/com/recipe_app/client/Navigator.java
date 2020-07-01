@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.navigation.NavController;
 
 import com.recipe_app.client.ui.home.HomeScreen;
+import com.recipe_app.client.ui.ingredients.IngredientsDetailScreen;
 import com.recipe_app.client.ui.ingredients.IngredientsScreen;
 import com.recipe_app.client.ui.recipes.RecipesDetailScreen;
 import com.recipe_app.client.ui.recipes.RecipesScreen;
@@ -29,6 +30,10 @@ public abstract class Navigator {
 
     public static void toIngredients(BaseActivity cntxt, Bundle b) {
         launch(cntxt, IngredientsScreen.class, b);
+    }
+
+    public static void toIngredientsDetail(BaseActivity cntxt, Bundle b) {
+        launch(cntxt, IngredientsDetailScreen.class, b);
     }
 
     private static void launch(BaseActivity cntxt, Class cl, Bundle b) {

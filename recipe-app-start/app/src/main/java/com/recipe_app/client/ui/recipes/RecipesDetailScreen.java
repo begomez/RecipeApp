@@ -13,6 +13,7 @@ import com.recipe_app.client.BaseActivity;
 import com.recipe_app.client.R;
 import com.recipe_app.client.data.model.Recipe;
 import com.recipe_app.client.ui.ExtrasFactory;
+import com.recipe_app.client.ui.widget.TextViewWidget;
 
 
 public class RecipesDetailScreen extends BaseActivity {
@@ -41,6 +42,9 @@ public class RecipesDetailScreen extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        this.setViewData();
+
         this.setTabs();
     }
 
@@ -54,16 +58,25 @@ public class RecipesDetailScreen extends BaseActivity {
         TabLayout tabLayout = ((TabLayout) this.findViewById(R.id.recipe_detail_tabs));
         tabLayout.setupWithViewPager(pager);
 
-//      Custom Text Color
-//      Option A (no XML)
+        //      Custom Text Color
+        //      Option A (no XML)
       tabLayout.setTabTextColors(getResources().getColor(R.color.textColorAccentLight), getResources().getColor(R.color.textColorPrimary));
 
-//      Custom Text Color
-//        Option B (with XML)
-//        TextView tv = (TextView) LayoutInflater.from(this).inflate(R.layout.tab_contents,null);
-//        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-//            tabLayout.getTabAt(i).setCustomView(tv);
-//        }
+        //      Custom Text Color
+        //        Option B (with XML)
+        //        TextView tv = (TextView) LayoutInflater.from(this).inflate(R.layout.tab_contents,null);
+        //        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+        //            tabLayout.getTabAt(i).setCustomView(tv);
+        //        }
 
+    }
+
+    private void setViewData() {
+        TextViewWidget txtRecipeName = ((TextViewWidget) this.findViewById(R.id.recipe_txt_name));
+        if(target != null) {
+            txtRecipeName.setText(target.getName());
+        } else {
+            txtRecipeName.setText("Recipe Name");
+        }
     }
 }

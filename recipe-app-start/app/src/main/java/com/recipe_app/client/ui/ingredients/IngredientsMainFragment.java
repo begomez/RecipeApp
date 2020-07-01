@@ -24,7 +24,7 @@ public class IngredientsMainFragment extends BaseFragment {
         @Override
         public void onIngredientClick(Ingredient ingr) {
             //TODO: call when exists
-            //Navigator.toIngredientsDetail((BaseActivity) getActivity(), ExtrasFactory.getIngredientExtras(ingr));
+            Navigator.toIngredientsDetail((BaseActivity) getActivity(), ExtrasFactory.getIngredientExtras(ingr));
         }
     };
 
@@ -63,6 +63,8 @@ public class IngredientsMainFragment extends BaseFragment {
 //                                                                                    ((LinearLayoutManager) layoutManager).getOrientation());
 //        recyclerView.addItemDecoration(mDividerItemDecoration);
 
+        //TODO load ingredients from database
+
         IngredientsAdapter mAdapter = new IngredientsAdapter(DummyData.getListOfIngredients(15), onIngrClickListener);
         recyclerView.setAdapter(mAdapter);
     }
@@ -72,10 +74,12 @@ public class IngredientsMainFragment extends BaseFragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New Ingredient!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Navigator.toIngredientsDetail((BaseActivity) getActivity(), new Bundle());
+//                Snackbar.make(view, "New Ingredient!", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
             }
         });
 
     }
+
 }

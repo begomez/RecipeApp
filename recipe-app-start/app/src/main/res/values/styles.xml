@@ -225,14 +225,20 @@
     </style>
 
 
+    <!--
+                DETAIL SCREEN: TYPE 1
 
+     -->
+    <style name="DetailTitleBackgroundBox">
+        <item name="android:background"> #8888 </item>
+    </style>
 
-    <!--    DETAIL SCREEN   -->
-    <style name="DetailTitleImage">
+    <style name="DetailTabsTitleImage">
         <item name="android:scaleType"> centerCrop </item>
         <item name="android:cropToPadding"> false </item>
     </style>
-    <style name="DetailTitleText">
+
+    <style name="DetailTabsTitleText">
         <item name="android:textSize"> @dimen/font_large </item>
         <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
         <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
@@ -242,19 +248,58 @@
         <item name="android:lines">1</item>
     </style>
 
-    <style name="DetailTitleBackgroundBox">
-        <item name="android:background"> #8888 </item>
-    </style>
-
-    <style name="DetailTitleEditIcon">
+    <style name="DetailTabsTitleEditIcon">
         <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
         <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
         <item name="android:scaleType"> fitCenter </item>
         <item name="android:cropToPadding"> false </item>
     </style>
 
+    <!--
+               DETAIL SCREEN: TYPE 2
 
+    -->
+    <style name="DetailFormTitleImage">
+        <item name="android:scaleType"> centerCrop </item>
+        <item name="android:cropToPadding"> false </item>
+        <item name="android:layout_marginTop"> 48dp </item>
+        <item name="android:layout_marginBottom"> 48dp </item>
+        <item name="android:layout_marginLeft"> 48dp </item>
+        <item name="android:layout_marginRight"> 48dp </item>
+    </style>
 
+    <style name="DetailFormTitleText">
+        <item name="android:textSize"> @dimen/font_medium </item>
+        <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:lines"> 1 </item>
+    </style>
 
+    <style name="DetailFormTitleEditTextSingleLine">
+        <item name="android:textSize"> @dimen/font_medium </item>
+        <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+        <item name="android:maxLines"> 1 </item>
+        <item name="android:lines"> 1 </item>
+        <item name="android:gravity"> top|right </item>
+    </style>
+
+    <style name="DetailFormTitleEditTextMultipleLines">
+        <item name="android:textSize"> @dimen/font_medium </item>
+        <item name="android:paddingLeft"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingTop"> @dimen/detail_title_text_padding </item>
+        <item name="android:paddingBottom"> @dimen/detail_title_text_padding </item>
+        <item name="android:textColor"> @color/textColorAccent </item>
+        <item name="android:maxLines"> 4 </item>
+        <item name="android:lines"> 4 </item>
+        <item name="android:inputType"> textMultiLine </item>
+        <item name="android:gravity">top|right </item>
+        <item name="android:scrollbars"> vertical </item>
+    </style>
 
 </resources>

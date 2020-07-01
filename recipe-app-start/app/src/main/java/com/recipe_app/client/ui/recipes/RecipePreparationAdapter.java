@@ -9,10 +9,12 @@ import com.recipe_app.client.R;
 import com.recipe_app.client.data.model.DummyData;
 import com.recipe_app.client.data.model.RecipePreparation;
 
+import java.util.ArrayList;
+
 
 public class RecipePreparationAdapter extends RecyclerView.Adapter<RecipePreparationAdapter.RecipePreparationViewHolder> {
 
-    private RecipePreparation[] data;
+    private ArrayList<RecipePreparation> data;
 
     public static class RecipePreparationViewHolder extends RecyclerView.ViewHolder {
 
@@ -45,14 +47,14 @@ public class RecipePreparationAdapter extends RecyclerView.Adapter<RecipePrepara
     @Override
     public void onBindViewHolder(RecipePreparationViewHolder holder, int i) {
         if(data != null) { //TODO needed?
-            holder.txtStepNumber.setText(data[i].getStepNumber()+".");
-            holder.txtStepDesc.setText(data[i].getStepDescription());
+            holder.txtStepNumber.setText(data.get(i).getStepNumber()+".");
+            holder.txtStepDesc.setText(data.get(i).getStepDescription());
         }
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return data.size();
     }
 
     /*
