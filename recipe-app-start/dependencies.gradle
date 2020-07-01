@@ -1,0 +1,96 @@
+ext {
+
+    // Framework
+    buildToolsVersion = "29.0.1"
+    minSdkVersion = 21
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+
+    // Libs
+    constraintVersion = "1.1.3"
+    kotlinVersion = "1.3.50"
+    kotlinCoreVersion = "1.0.2"
+    appCompatVersion = "1.0.2"
+    eventBusVersion = "3.0.0"
+
+    rxJavaVersion = "2.0.2"
+    javaxAnnotationVersion = "1.0"
+    javaxInjectVersion = "1"
+
+    retrofitVersion = "2.1.0"
+    retrofitAdapterVersion = "1.0.0"
+    gsonVersion = "2.7"
+    okhttpVersion = "3.7.0"
+
+    daggerVersion = "2.11"
+    roomVersion = "2.2.2"
+
+    archComponentsVersion = "2.0.0"
+
+    recyclerVersion = "1.0.0"
+    cardVersion = "1.0.0"
+
+    // Test libs
+    jUnitVersion = "4.12"
+    androidJUnitVersion = "1.1.0"
+    assertJVersion = "3.8.0"
+    mockitoVersion = "2.2.0"
+    espressoVersion = "3.1.1"
+    roboVersion = "4.3.1"
+    picassoVersion = "+"
+
+    globalDependencies = [
+            kotlinStd: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            kotlinCore: "androidx.core:core-ktx:$kotlinCoreVersion",
+            appCompat: "androidx.appcompat:appcompat:$appCompatVersion"
+    ]
+
+    domainDependencies = [
+            rxJava: "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            javaAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaInject: "javax.inject:javax.inject:${javaxInjectVersion}"
+    ]
+
+    remoteDependencies = [
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofitAdapterVersion",
+            gson: "com.google.code.gson:gson:$gsonVersion",
+            okhttp: "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            okhttpInterceptor: "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    ]
+
+    cacheDependencies = [
+            roomRuntime: "androidx.room:room-runtime:$roomVersion",
+            roomCompiler: "androidx.room:room-compiler:$roomVersion",
+            roomRxJava: "androidx.room:room-rxjava2:$roomVersion"
+    ]
+
+    presentationDependencies = [
+            arch: "androidx.lifecycle:lifecycle-extensions:$archComponentsVersion",
+            archRuntime: "androidx.lifecycle:lifecycle-runtime:$archComponentsVersion",
+            archCompiler: "androidx.lifecycle:lifecycle-compiler:$archComponentsVersion"
+    ]
+
+    uiDependencies = [
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:${rxJavaVersion}",
+            roomRuntime: "androidx.room:room-runtime:$roomVersion",
+            roomCompiler: "androidx.room:room-compiler:$roomVersion",
+            roomRxJava: "androidx.room:room-rxjava2:$roomVersion",
+            recycler: "androidx.recyclerview:recyclerview:$recyclerVersion",
+            card: "androidx.cardview:cardview:$cardVersion",
+            picasso: "com.squareup.picasso:picasso:$picassoVersion"
+    ]
+
+    testDependencies = [
+            jUnit: "junit:junit:${jUnitVersion}",
+            androidJUnit: "androidx.test.ext:junit:${androidJUnitVersion}",
+            assertJ: "org.assertj:assertj-core:${assertJVersion}",
+            mockito: "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoVersion}",
+            mockitoAnnotation: "org.mockito4kotlin:annotation:+",
+            espresso: "androidx.test.espresso:espresso-core:${espressoVersion}",
+            room: "androidx.room:room-testing:$roomVersion",
+            robolectric: "org.robolectric:robolectric:$roboVersion",
+            archCore: "androidx.arch.core:core-testing:$archComponentsVersion"
+    ]
+}
